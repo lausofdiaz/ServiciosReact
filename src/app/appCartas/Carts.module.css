@@ -1,0 +1,92 @@
+/* Estilos para el cuerpo de la página */
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilos para el contenedor principal */
+  .div {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el encabezado */
+  .header {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .h1 {
+    margin: 0;
+  }
+  
+  /* Estilos para la navegación */
+  .nav .ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav .ul .li {
+    display: inline;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Estilos para el contenido principal */
+  .main {
+    padding: 20px;
+  }
+  
+  .h2 {
+    font-size: 24px;
+  }
+  
+  /* Estilos para las tarjetas (carts) */
+  .div > .div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .p {
+    margin: 0;
+  }
+  
+  .ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .li {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para el pie de página */
+  .footer {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Estilos para el nombre y año en el pie de página */
+  .footer span {
+    font-weight: bold;
+  }
+  
