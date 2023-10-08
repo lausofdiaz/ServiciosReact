@@ -1,5 +1,6 @@
 "use client"; 
 import React, { useEffect, useState } from 'react';
+import styles from './newProducts.module.css'
 export default function newProducts() {
     const [products, setProducts] = useState([]);
     const productId = Number(localStorage.getItem('productId'));
@@ -39,7 +40,7 @@ export default function newProducts() {
                     Imagen del producto:
                     <br>
                     </br>
-                     <img src={product.image}></img>
+                     <img className={styles.img} src={product.image}></img>
                 </li>
                 
             ))}
