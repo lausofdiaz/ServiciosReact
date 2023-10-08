@@ -28,10 +28,10 @@ useEffect(() => {
     <div>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
-          <li className={styles.li}>Carts</li>
-          <li className={styles.li}>Products</li>
-          <li className={styles.li}>New Product</li>
-          <li className={styles.li}><Link href="/newCarts">New Cart</Link></li>
+          <li className={styles.li}><Link href="/appCartas">Carros</Link></li>
+          <li className={styles.li}><Link href="/listProducts">Productos</Link></li>
+          <li className={styles.li}><Link href="">Nuevo Producto</Link></li>
+          <li className={styles.li}><Link href="/newCarts">Nuevo Carro</Link></li>
         </ul>
       </nav>
       <main className={styles.main}>
@@ -39,8 +39,8 @@ useEffect(() => {
         <div className={styles.div}>
                     {carts.map((cart) => (
               <div className={styles.div} key={cart.id}>
-                <h3 className={styles.h3}>Cart ID: {cart.id}</h3>
-                <p className={styles.p}>Usuario ID: {cart.userId}</p>
+                <h3 className={styles.h3}>Identificador del carro: {cart.id}</h3>
+                <p className={styles.p}>Identificador del usuario: {cart.userId}</p>
                 <p className={styles.p}>Fecha: {cart.date}</p>
                 <h4>Productos:</h4>
                 <ul>

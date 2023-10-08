@@ -8,7 +8,7 @@ export default function newProducts() {
         fetch(`https://fakestoreapi.com/products/${productId}`)
             .then(res => res.json())
             .then(product => {
-                setProducts([product]); // Convierte el producto en una lista
+                setProducts([product]); 
             });
     }, [productId]);
     ;
