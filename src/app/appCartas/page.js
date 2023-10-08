@@ -11,6 +11,13 @@ useEffect(() => {
       .then(res => res.json()) 
       .then(data => setCarts(data)); // Actualiza el estado de carts con los datos recibidos
   }, []); 
+
+  const handleMoreDetails = (cartId) => {
+    localStorage.setItem('cartId', cartId.toString());
+    window.location.href = `/appCartas/products?cartId=${cartId}`;
+    console.log(cartId)
+}
+
   
   return (
     <div className={styles.body}>
@@ -30,19 +37,23 @@ useEffect(() => {
       <main className={styles.main}>
         <h2 className={styles.h2}>Carts</h2>
         <div className={styles.div}>
-          {carts.map((cart) => (
-            <div className={styles.div}key={cart.id}>
-              <h3 className={styles.h3}>Cart ID: {cart.id}</h3>
-              <p className={styles.p}>Usuario ID: {cart.userId}</p>
-              <p className={styles.p}>Fecha: {cart.date}</p>
-              <h4>Productos:</h4>
-              <ul>
-                {cart.products.map((product, index) => (
-                  <li key={index}>Producto ID: {product.productId}, Cantidad: {product.quantity}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                    {carts.map((cart) => (
+              <div className={styles.div} key={cart.id}>
+                <h3 className={styles.h3}>Cart ID: {cart.id}</h3>
+                <p className={styles.p}>Usuario ID: {cart.userId}</p>
+                <p className={styles.p}>Fecha: {cart.date}</p>
+                <h4>Productos:</h4>
+                <ul>
+                  {cart.products.map((product, index) => (
+                    <li key={index}>
+                    Producto número: {product.productId}, Cantidad del producto: {product.quantity}
+                  </li>
+                  ))}
+                </ul>
+                <button onClick={() => handleMoreDetails(cart.id)}>Más detalles</button>
+              </div>
+            ))}
+
         </div>
       </main>
     </div>

@@ -2,10 +2,6 @@
 import Link from 'next/link'; 
 import React, { useState } from 'react';
 
-// NewCart.js
-
-
-
 export default function NewCart() {
   const [cart, setCart] = useState({
     userId: '',
@@ -17,7 +13,7 @@ export default function NewCart() {
     e.preventDefault();
 
     // Realiza una solicitud POST a tu endpoint para agregar un nuevo carrito
-    fetch('https://fakestoreapi.com/cart', {
+    fetch('https://fakestoreapi.com/carts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +30,7 @@ export default function NewCart() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCart((prevCart) => ({
-      ...prevCart,
+      prevCart,
       [name]: value,
     }));
   };
@@ -44,13 +40,7 @@ export default function NewCart() {
       <h2>Agregar Nuevo Carrito</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="userId">Usuario ID:</label>
-        <input
-          type="text"
-          id="userId"
-          name="userId"
-          value={cart.userId}
-          onChange={handleChange}
-        />
+        <input type="text" id="userId"name="userId" value={cart.userId}onChange={handleChange}/>
         <br />
 
         <label htmlFor="date">Fecha:</label>
